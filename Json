@@ -1,0 +1,12 @@
+{
+  "instagram": [
+    { "username": "insta_user1", "password": "password1" },
+    { "username": "insta_user2", "password": "password2" },
+    { "username": "insta_user3", "password": "password3" }
+  ],
+  "tiktok": [
+    { "username": "tiktok_user1", "password": "password1" },
+    { "username": "tiktok_user2", "password": "password2" },
+    { "username": "tiktok_user3", "password": "password3" }
+  ]
+}

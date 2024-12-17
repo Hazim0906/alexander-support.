@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instagram Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>خدمات Instagram</h1>
+    <button onclick="location.href='#followers'">زيادة متابعين</button>
+    <button onclick="location.href='#interactions'">زيادة تفاعل</button>
+
+    <div id="followers">
+        <h2>زيادة متابعين</h2>
+        <input type="text" id="profileLink" placeholder="أدخل رابط الصفحة">
+        <input type="number" id="quantity" placeholder="الكمية المطلوبة (الحد الأقصى 25000)">
+        <button onclick="sendRequest('instagram')">تنفيذ</button>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
