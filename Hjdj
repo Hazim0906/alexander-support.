@@ -1,0 +1,35 @@
+import sys
+import json
+import time
+import random
+
+# قراءة الحسابات من ملف JSON
+with open("accounts.json", "r") as file:
+    accounts = json.load(file)
+
+platform = sys.argv[1]  # Instagram أو TikTok
+link = sys.argv[2]      # رابط الصفحة المراد متابعتها
+quantity = int(sys.argv[3])  # الكمية المطلوبة
+
+# اختيار الحسابات بناءً على المنصة
+account_list = accounts.get(platform, [])
+if not account_list:
+    print(f"لا توجد حسابات مخزنة لمنصة {platform}")
+    sys.exit(1)
+
+# تنفيذ العملية
+print(f"بدء زيادة المتابعين على {platform} للرابط: {link}")
+for i in range(quantity):
+    account = account_list[i % len(account_list)]  # تبديل بين الحسابات
+    username = account['username']
+    password = account['password']
+    
+    # تسجيل الدخول (محاكاة فقط - تحتاج إلى مكتبة Selenium أو Instabot هنا)
+    print(f"[{i+1}] تسجيل الدخول بالحساب: {username}")
+    time.sleep(random.randint(1, 3))  # انتظار عشوائي لمحاكاة العملية
+    
+    # متابعة الرابط
+    print(f"متابعة الحساب: {link} باستخدام {username}")
+    time.sleep(random.randint(2, 5))  # انتظار عشوائي بين كل عملية
+
+print("تمت العملية بنجاح!") 
